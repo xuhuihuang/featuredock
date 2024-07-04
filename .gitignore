@@ -1,0 +1,11 @@
+__pycache__
+*.LOG
+.ipynb_checkpoints/
+data/PDBbind_v2020_refined.tar.gz
+data/refined-set
+data/apo
+data/het
+data/voxels
+data/ff
+data/voxel_details
+src/utils/smina-code
