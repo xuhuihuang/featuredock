@@ -1,6 +1,8 @@
 ## Project Aim
 The hypothesis is that the protein-ligand interaction map depends only on local environments instead of the whole protein. This model predicts the geometric preference of ligand given a protein pocket. The trained neural network can predict probability maps of novel query structures. Such s probability map can be used to pick potential binding ligands from existing small compound libraries based on a custom scoring function encoding the probabilities.
 
+![pipeline](./docs/featuredock_pipline.png)
+
 ## Setup Environment
 ```bash
 conda create -n featdock python=3.8
