@@ -1,0 +1,7 @@
+FEATURE_DIR: /mnt/d/_neural_network_predicted_topology_map/_PDBBind_topology_full_model/20240213_code_and_data/src/utils/feature-3.1.0/data
+verbosity: 0
+numShells: 6
+shellWidth: 1.25
+excludeResidues: 1 [ HETATM  ]
+pdbids: 1 [ 1b38  ]
+search path: aligned_apo
