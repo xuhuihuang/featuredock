@@ -104,7 +104,7 @@ Commands can be found in `commands/step2_1curate_dataset_commands.sh`. The size 
 
 
 ## How to Cite
-To be updated
+The preprint is available as [FeatureDock: Protein-Ligand Docking Guided by Physicochemical Feature-Based Local Environment Learning using Transformer](https://chemrxiv.org/engage/chemrxiv/article-details/668db48f01103d79c5888013).
 
 ## References
 1. Halperin, I., Glazer, D. S., Wu, S., & Altman, R. B. The FEATURE framework for protein function annotation: modeling new functions, improving performance, and extending to novel applications. In BMC Genomics (Vol. 9, Issue S2). https://doi.org/10.1186/1471-2164-9-s2-s2
