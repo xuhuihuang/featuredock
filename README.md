@@ -22,7 +22,7 @@ Unzip `utils/feature-3.1.0.zip`.
 
 In case that `dssp` cannot be correctly installed via `conda`, please use the `dssp` binary file in `src/utils`.
 ```bash
-PROJ_HOME=FeatureDock
+PROJ_HOME=featuredock
 export PATH=${PROJ_HOME}/src/utils:${PATH}
 dssp --version
 ```
@@ -33,9 +33,11 @@ conda install -c pytorch captum # exlainable-AI -->
 ## Predict
 Run a quick prediction using one trained model:
 ```bash
-PROJ_HOME=FeatureDock
+PROJ_HOME=featuredock
 MODELREPO=${PROJ_HOME}/results/vit_20
 MODELTYPE=transformer
+NBLOCKS=20
+TASK=HeavyAtomsite
 SEED=0
 MODELNAME=${TASK}_${MODELTYPE}_${NBLOCKS}_seed${SEED}
 PRED_DIR=${PROJ_HOME}/examples
