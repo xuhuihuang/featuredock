@@ -18,7 +18,7 @@ pip install rdkit==2022.9.5
 pip install tqdm
 ```
 
-Unzip `utils/feature-3.1.0.zip`.
+Unzip `utils/feature-3.1.0.zip`, and add executable mode to `utils/feature-3.1.0/src/feature`.
 
 In case that `dssp` cannot be correctly installed via `conda`, please use the `dssp` binary file in `src/utils`.
 ```bash
