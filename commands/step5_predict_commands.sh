@@ -2,7 +2,7 @@ PROJ_HOME=FeatureDock
 DATA_DIR=${PROJ_HOME}/data
 SCRIPT_HOME=${PROJ_HOME}/src
 VOXEL_DIR=${DATA_DIR}/voxels
-MODELREPO=${PROJ_HOME}/results
+MODELREPO=${PROJ_HOME}/results/vit_20
 FEATURE_PROGRAM=${PROJ_HOME}/src/utils/feature-3.1.0
 
 PRED_DIR=${PROJ_HOME}/examples
@@ -76,7 +76,7 @@ python ${SCRIPT_HOME}/application/ensemble_average.py \
 ###############################
 #     PYMOL VISUALIZATIOM     #
 ###############################
-# plot grid points with probabilities above 0.7, 0.8, 0.9, 0.95
+# plot grid points with probabilities above 0.8, 0.9, 0.95
 # the output xyz files can be visualized in PyMol
 python ${SCRIPT_HOME}/application/plot_prediction.py \
     --voxelfile=${PRED_DIR}/${name}_gridpoints.voxels.pkl \
