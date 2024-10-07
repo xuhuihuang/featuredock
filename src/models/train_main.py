@@ -95,7 +95,10 @@ if CONFIG['checkpoint'] is not None:
     checkpoint = torch.load(CONFIG['checkpoint'], map_location=torch.device(DEVICE))
     model.load_state_dict(checkpoint['model_state_dict'])
     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
-    scheduler.load(checkpoint['scheduler_state_dict'])
+    if checkpoint['scheduler_state_dict']:
+        scheduler.load(checkpoint['scheduler_state_dict'])
+    else:
+        scheduler = None
 param_num = count_parameters(model)
 print('Number of tunable parameters:', param_num)
 
@@ -242,7 +245,7 @@ def run_one_fold(modelname, splits, df, folder, suffix, pid_pool, CONFIG, verbos
             torch.save({
                     'model_state_dict': model.state_dict(),
                     'optimizer_state_dict': optimizer.state_dict(),
-                    'scheuler_state_dict': scheduler.state_dict()},
+                    'scheuler_state_dict': scheduler.state_dict() if scheduler else None},
                 checkpoint)
         if scheduler is not None:
             if scheduler_name == 'plateau':
@@ -260,7 +263,7 @@ def run_one_fold(modelname, splits, df, folder, suffix, pid_pool, CONFIG, verbos
     torch.save({
             'model_state_dict': model.state_dict(),
             'optimizer_state_dict': optimizer.state_dict(),
-            'scheuler_state_dict': scheduler.state_dict()},
+            'scheuler_state_dict': scheduler.state_dict() if scheduler else None},
         param_file)
 
 ##########
