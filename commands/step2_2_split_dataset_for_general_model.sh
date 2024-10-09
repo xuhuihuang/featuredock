@@ -14,7 +14,7 @@ CLANFILE=${DATA_DIR}/ClanGraph_${SQID}_df.pkl
 python ${SCRIPT_HOME}/curate_dataset/cluster_structures.py \
     --sqid=${SQID} \
     --outdir=${DATA_DIR} \
-    --pdbids=${LABELDLIST} \
+    --pdbids=${LABELEDLIST} \
     --overwrite \
     --draw
 
